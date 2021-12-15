@@ -1,0 +1,32 @@
+﻿<Window x:Name="___No_Name_" x:Class="TPConverter.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TPConverter"
+        mc:Ignorable="d"
+        Title="TP Converter" Height="450" Width="800" Icon="TP.ico">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="98*"/>
+            <ColumnDefinition Width="555*"/>
+            <ColumnDefinition Width="139*"/>
+        </Grid.ColumnDefinitions>
+        <RichTextBox x:Name="TransformTextBox" Margin="10,151,10,10" Grid.ColumnSpan="3" TabIndex="7">
+            <FlowDocument>
+                <Paragraph>
+                    <Run Text=""/>
+                </Paragraph>
+            </FlowDocument>
+        </RichTextBox>
+        <TextBox x:Name="SeparatorTextBox" HorizontalAlignment="Left" Height="23" Margin="10,36,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.ColumnSpan="2" Text="^" TabIndex="1"/>
+        <Label Content="Separator" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="120" Grid.ColumnSpan="2"/>
+        <Label Content="Text to transform" HorizontalAlignment="Left" Margin="10,125,0,0" VerticalAlignment="Top" Width="120" Grid.ColumnSpan="2"/>
+        <Button x:Name="ConvertButton" Content="Convert" HorizontalAlignment="Left" Margin="152,39,0,0" VerticalAlignment="Top" Width="75" Click="ConvertButton_Click" Grid.Column="1" TabIndex="4"/>
+        <Button x:Name="PasteButton" Content="Paste" HorizontalAlignment="Left" Margin="54,39,0,0" VerticalAlignment="Top" Width="75" Click="PasteButton_Click" Grid.Column="1" TabIndex="3"/>
+        <Button x:Name="CopyButton" Content="Copy" HorizontalAlignment="Left" Margin="250,39,0,0" VerticalAlignment="Top" Width="75" Click="CopyButton_Click" Grid.Column="1" TabIndex="5"/>
+        <Label Content="ID" HorizontalAlignment="Left" Margin="10,71,0,0" VerticalAlignment="Top" Width="120" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="IDTextBox" HorizontalAlignment="Left" Height="23" Margin="10,97,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.ColumnSpan="2" TabIndex="2"/>
+        <Button x:Name="TransfortAllButton" Content="Paste &amp; Convert &amp; Copy" HorizontalAlignment="Left" Margin="348,39,0,0" VerticalAlignment="Top" Width="142" Click="TransfortAllButton_Click" Grid.Column="1" TabIndex="6"/>
+    </Grid>
+</Window>
